@@ -258,7 +258,9 @@ namespace DocuSign.eSign.Client
         {
             try
             {
-                return obj != null ? JsonConvert.SerializeObject(obj) : null;
+                string output = obj != null ? JsonConvert.SerializeObject(obj) : null;
+                output = output.Replace("\\\\*", "*");  //Un-escape too many brackets. This allows for the wildcard behavior in DocuSign to send the same value for multiple merge fields
+                return output;
             }
             catch (Exception e)
             {
