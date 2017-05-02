@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4BD9879-446A-483E-8886-B74D36536956}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocuSignAPI</RootNamespace>
+    <AssemblyName>DocuSignAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.8\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.8\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.8\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\AccountsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\AuthenticationApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\BillingApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\BulkEnvelopesApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\CloudStorageApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\ConnectApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\CustomTabsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\DiagnosticsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\EnvelopesApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\FoldersApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\GroupsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\PowerFormsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\SigningGroupsApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\TemplatesApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\UsersApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Api\WorkspacesApi.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\ApiClient.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\ApiException.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\ApiResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\Configuration.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\ExceptionFactory.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Client\IApiAccessor.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountAddress.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountBillingPlan.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountBillingPlanResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountRoleSettings.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountSettingsInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountSharedAccess.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountSignatureProvider.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountSignatureProviderOption.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AccountSignatureProviders.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AddOn.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AddressInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AddressInformationInput.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AddressInformationV2.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Agent.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ApiRequestLog.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ApiRequestLogsResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Approve.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AppStoreProduct.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AppStoreReceipt.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Attachment.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AuthenticationMethod.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\AuthenticationStatus.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BccEmailAddress.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingCharge.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingChargeResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingDiscount.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingInvoice.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingInvoiceItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingInvoicesResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingInvoicesSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPayment.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPaymentItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPaymentRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPaymentResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPaymentsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlan.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlanInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlanPreview.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlanResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlansResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPlanUpdateResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BillingPrice.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Brand.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandEmailContent.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandLink.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandLogos.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandResources.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandResourcesList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandResourceUrls.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BrandsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkEnvelope.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkEnvelopesResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkEnvelopeStatus.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipient.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientSignatureProvider.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientsSummaryResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientsUpdateResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\BulkRecipientTabLabel.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CaptiveRecipient.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CaptiveRecipientInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CarbonCopy.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CertifiedDelivery.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Checkbox.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ChunkedUploadPart.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ChunkedUploadRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ChunkedUploadResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CloudStorageProvider.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CloudStorageProviders.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Company.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CompositeTemplate.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectConfigResults.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectCustomConfiguration.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectDebugLog.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectFailureFilter.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectFailureResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectFailureResults.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectLog.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConnectLogs.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConsoleViewRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ConsumerDisclosure.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Contact.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ContactGetResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ContactModRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ContactUpdateResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CorrectViewRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Country.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CreditCardInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CreditCardTypes.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CurrencyFeatureSetPrice.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CurrencyPlanPrice.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CustomFields.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CustomFieldsEnvelope.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CustomFieldV2.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\CustomSettingsInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Date.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DateSigned.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Decline.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DiagnosticsSettingsInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DobInformationInput.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Document.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DocumentFieldsInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DocumentTemplate.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DocumentTemplateList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DocumentVisibility.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\DocumentVisibilityList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Editor.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Email.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EmailAddress.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EmailSettings.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ENoteConfiguration.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Envelope.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeAttachment.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeAttachmentsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeAttachmentsResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeAuditEvent.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeAuditEventResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeDefinition.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeDocument.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeDocumentsResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeEvent.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeFormData.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeId.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeIdsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeNotificationRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopesInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeTemplate.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeTemplateDefinition.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeTemplateResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeTemplateResults.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeTransactionStatus.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EnvelopeUpdateSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ErrorDetails.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EventNotification.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\EventResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Expirations.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ExternalDocServiceErrorDetails.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ExternalFile.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ExternalFolder.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FeatureSet.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FileType.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FileTypeList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Filter.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FirstName.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Folder.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FolderItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FolderItemResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FolderItemsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FolderItemV2.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FoldersRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FoldersResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ForgottenPasswordInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FormulaTab.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\FullName.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Group.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\GroupInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\IdCheckInformationInput.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\InitialHere.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\InlineTemplate.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\InPersonSigner.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\IntegratedUserInfoList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Intermediary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\LastName.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\List.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ListCustomField.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ListItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\LockInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\LockRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\LoginAccount.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\LoginInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MatchBox.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MemberGroupSharedItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MemberSharedItems.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MergeField.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MobileNotifierConfiguration.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\MobileNotifierConfigurationInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Money.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NameValue.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NewAccountDefinition.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NewAccountSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NewUser.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NewUsersDefinition.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NewUsersSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\NotaryHost.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Note.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Notification.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Number.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\OauthAccess.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\OfflineAttributes.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Page.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PageImages.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PageRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PaymentDetails.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PaymentLineItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PermissionProfile.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PermissionProfileInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PlanInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PostTransactionsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PostTransactionsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerForm.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormFormDataEnvelope.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormFormDataRecipient.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormRecipient.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormSendersResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormsFormDataResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormsRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PowerFormsResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PropertyMetadata.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Province.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ProvisioningInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\PurchasedEnvelopesInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Radio.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RadioGroup.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientAttachment.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientDomain.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientEmailNotification.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientEvent.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientFormData.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientNamesResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientPhoneAuthentication.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Recipients.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientSAMLAuthentication.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientSignatureInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientSignatureProvider.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientSignatureProviderOptions.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientSMSAuthentication.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientsUpdateSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientUpdateResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\RecipientViewRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ReferralInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Reminders.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ResourceInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ReturnUrlRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SamlAssertionAttribute.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SeatDiscount.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SenderEmailNotifications.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ServerTemplate.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ServiceInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ServiceVersion.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SettingsMetadata.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SharedItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SignatureProviderRequiredOption.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SignatureType.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Signer.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SignerAttachment.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SignerEmailNotifications.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SignHere.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SigningGroup.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SigningGroupInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SigningGroupUser.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SigningGroupUsers.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SocialAccountInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\SocialAuthentication.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Ssn.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Ssn4InformationInput.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Ssn9InformationInput.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TabAccountSettings.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TabMetadata.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TabMetadataList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Tabs.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateCustomFields.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateDocumentsResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateDocumentVisibilityList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateMatch.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateNotificationRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateRecipients.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateRole.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateSharedItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateTabs.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TemplateUpdateSummary.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Text.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\TextCustomField.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Title.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UsageHistory.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserAccountManagementGranularInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserInfo.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserInfoList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserInformationList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserPasswordInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserProfile.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSettingsInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSharedItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSignature.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSignatureDefinition.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSignaturesInformation.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UserSocialIdResult.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\UsersResponse.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\View.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ViewLinkRequest.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\ViewUrl.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Workspace.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceFolderContents.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceItem.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceItemList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceList.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceUser.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\WorkspaceUserAuthorization.cs" />
+    <Compile Include="sdk\src\main\csharp\DocuSign\eSign\Model\Zip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
